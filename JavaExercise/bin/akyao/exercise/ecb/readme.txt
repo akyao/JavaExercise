@@ -1,0 +1,1 @@
+http://www5c.biglobe.ne.jp/~ecb/algorithm/algorithm00.html
