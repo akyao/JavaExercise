@@ -9,7 +9,7 @@ public class InterestingPartyTest {
     InterestingParty party = new InterestingParty();
 
     @Test
-    public void thePouring() {
+    public void test() {
         assertEquals(
                 4,
                 party.bestInvitation(f("fishing", "gardening", "swiming", "fishing"),

@@ -9,7 +9,7 @@ public class CryptgraphyTest {
     Cryptography crypt = new Cryptography();
 
     @Test
-    public void encrypt() {
+    public void test() {
         assertEquals(12l, crypt.encrypt(f(1, 2, 3)));
         assertEquals(36l, crypt.encrypt(f(1, 3, 2, 1, 1, 3)));
         assertEquals(986074810223904000l, crypt.encrypt(f(1000, 999, 998, 997, 996, 995)));
