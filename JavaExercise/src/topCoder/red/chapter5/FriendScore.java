@@ -32,9 +32,7 @@ public class FriendScore {
             // コネクションの数をかぞえる
             int connectionCount = getCount(connections, "Y");
 
-            if (max < connectionCount) {
-                max = connectionCount;
-            }
+            max = Math.max(max, connectionCount);
         }
 
         return max;
