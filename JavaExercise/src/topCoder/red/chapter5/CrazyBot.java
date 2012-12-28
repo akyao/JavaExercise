@@ -29,7 +29,7 @@ public class CrazyBot {
         }
 
         private double getProbability(List<Point> historyList, Point point, double percent) {
-            // ‚±‚Ìƒ|ƒWƒVƒ‡ƒ“‚ªŽ¸”s‚Å‚ ‚ê‚Î
+
             if (historyList.contains(point)) {
                 // historyList‚ªpoint‚ðŠÜ‚ñ‚Å‚¢‚é‚©‚Ç‚¤‚©
                 return 0;
