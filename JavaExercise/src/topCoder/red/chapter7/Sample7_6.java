@@ -1,4 +1,4 @@
-package topCoder.red.chapter6;
+package topCoder.red.chapter7;
 
 public class Sample7_6 {
 
