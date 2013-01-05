@@ -13,17 +13,21 @@ public class BadNeighbors {
         int ans = 0;
         int[] dp = new int[donations.length];
 
+        // 0番目始まり
         for (int i = 0; i < donations.length - 1; i++) {
             dp[i] = donations[i];
             if (i > 0) {
+                // A = i番目の値 OR i-1番目までの累積
                 dp[i] = Math.max(dp[i], dp[i - 1]);
             }
             if (i > 1) {
+                // A OR i-2番目までの累積+i番目
                 dp[i] = Math.max(dp[i], dp[i - 2] + donations[i]);
             }
             ans = Math.max(ans, dp[i]);
         }
 
+        // 1番目始まり(2番目始まりもフォロー)
         for (int i = 0; i < donations.length - 1; i++) {
             dp[i] = donations[i + 1];
             if (i > 0) {
