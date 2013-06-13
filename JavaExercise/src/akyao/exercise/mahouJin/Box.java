@@ -22,18 +22,6 @@ public class Box {
         this.num = num;
     }
 
-    public void standBy() {
-        for (int i = 1; i < +numManager.getMax(); i++) {
-            if (numManager.isUsed(i)) {
-                continue;
-            } else {
-                num = i;
-                numManager.useNum(i);
-                break;
-            }
-        }
-    }
-
     public int goNext() {
         int ret = 1;
         int result = 0;
@@ -41,6 +29,9 @@ public class Box {
             result = nextBox.goNext();
             if (result == 0) {
                 ret = nextNum();
+                if (ret > 0) {
+                    result = nextBox.goNext();
+                }
             }
         } else {
             ret = nextNum();
@@ -49,7 +40,8 @@ public class Box {
     }
 
     private int nextNum() {
-        int ret = 0;
+        int ret = 1;
+        int result = 0;
 
         if (num > 0) {
             numManager.delNum(num);
@@ -73,4 +65,15 @@ public class Box {
         return ret;
     }
 
+    public void standBy() {
+        for (int i = 1; i <= numManager.getMax(); i++) {
+            if (numManager.isUsed(i)) {
+                continue;
+            } else {
+                num = i;
+                numManager.useNum(i);
+                break;
+            }
+        }
+    }
 }
