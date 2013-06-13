@@ -46,6 +46,13 @@ public class Mahou {
     }
 
     public boolean judge() {
+        // for (int i = 0; i < size; i++) {
+        // for (int j = 0; j < size; j++) {
+        // System.out.print(hLines.get(i).boxes.get(j).getNum() + " ");
+        // }
+        // System.out.println();
+        // }
+
         for (int i = 0; i < size; i++) {
             Line vLine = vLines.get(i);
             HLine hLine = hLines.get(i);

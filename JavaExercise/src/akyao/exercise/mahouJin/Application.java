@@ -77,7 +77,6 @@ public class Application {
                 put();
             }
             notEnd = mahou.go();
-            System.out.println("notEnd:" + notEnd);
         }
 
         System.out.println(String.format("–‚–@w‚Ì”‚Í%sŒÂ‚Å‚·B", mahouNum));

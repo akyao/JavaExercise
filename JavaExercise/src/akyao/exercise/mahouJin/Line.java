@@ -34,6 +34,7 @@ public class Line {
         for (int i = 0; i < size; i++) {
             _sum += boxes.get(i).getNum();
         }
+        // System.out.println(String.format("%s:%s", _sum, this.sum));
         return _sum == this.sum;
     }
 
